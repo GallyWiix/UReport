@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hy.ureport.mapper.ResultIndustrialMapper">
+
+        <select id="selectResult" resultMap="getResultInd">
+            select
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0))                                                          as commit_number_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))                                                           as active_number_b204,
+                sum(IF(ac_status.type = "B204-1", 1, 0))                                                                                as total_number_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0)) * 100/ sum(IF(ac_status.type = "B204-1", 1, 0))          as commit_rate_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))/ sum(IF(ac_status.type = "B204-1", 1, 0)) as active_rate_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0))                                                          as commit_number_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))                                                           as active_number_b203,
+                sum(IF(ac_status.type = "B203", 1, 0))                                                                                as total_number_b203,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0)) * 100/ sum(IF(ac_status.type = "B203", 1, 0))          as commit_rate_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))/ sum(IF(ac_status.type = "B203", 1, 0)) as active_rate_b203
+
+            from ac_status
+            union
+            select
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0))                                                          as commit_number_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))                                                           as active_number_b204,
+                sum(IF(ac_status.type = "B204-1", 1, 0))                                                                                as total_number_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0)) * 100/ sum(IF(ac_status.type = "B204-1", 1, 0))          as commit_rate_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))/ sum(IF(ac_status.type = "B204-1", 1, 0)) as active_rate_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0))                                                          as commit_number_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))                                                           as active_number_b203,
+                sum(IF(ac_status.type = "B203", 1, 0))                                                                                as total_number_b203,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0)) * 100/ sum(IF(ac_status.type = "B203", 1, 0))          as commit_rate_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))/ sum(IF(ac_status.type = "B203", 1, 0)) as active_rate_b203
+
+            from ac_status
+            where region_code like "330502%"
+            union
+            select
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0))                                                          as commit_number_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))                                                           as active_number_b204,
+                sum(IF(ac_status.type = "B204-1", 1, 0))                                                                                as total_number_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0)) * 100/ sum(IF(ac_status.type = "B204-1", 1, 0))          as commit_rate_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))/ sum(IF(ac_status.type = "B204-1", 1, 0)) as active_rate_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0))                                                          as commit_number_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))                                                           as active_number_b203,
+                sum(IF(ac_status.type = "B203", 1, 0))                                                                                as total_number_b203,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0)) * 100/ sum(IF(ac_status.type = "B203", 1, 0))          as commit_rate_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))/ sum(IF(ac_status.type = "B203", 1, 0)) as active_rate_b203
+
+            from ac_status
+            where region_code like "330503%"
+            union
+            select
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0))                                                          as commit_number_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))                                                           as active_number_b204,
+                sum(IF(ac_status.type = "B204-1", 1, 0))                                                                                as total_number_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0)) * 100/ sum(IF(ac_status.type = "B204-1", 1, 0))          as commit_rate_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))/ sum(IF(ac_status.type = "B204-1", 1, 0)) as active_rate_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0))                                                          as commit_number_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))                                                           as active_number_b203,
+                sum(IF(ac_status.type = "B203", 1, 0))                                                                                as total_number_b203,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0)) * 100/ sum(IF(ac_status.type = "B203", 1, 0))          as commit_rate_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))/ sum(IF(ac_status.type = "B203", 1, 0)) as active_rate_b203
+
+            from ac_status
+            where region_code like "330521%"
+            union
+            select
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0))                                                          as commit_number_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))                                                           as active_number_b204,
+                sum(IF(ac_status.type = "B204-1", 1, 0))                                                                                as total_number_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0)) * 100/ sum(IF(ac_status.type = "B204-1", 1, 0))          as commit_rate_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))/ sum(IF(ac_status.type = "B204-1", 1, 0)) as active_rate_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0))                                                          as commit_number_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))                                                           as active_number_b203,
+                sum(IF(ac_status.type = "B203", 1, 0))                                                                                as total_number_b203,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0)) * 100/ sum(IF(ac_status.type = "B203", 1, 0))          as commit_rate_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))/ sum(IF(ac_status.type = "B203", 1, 0)) as active_rate_b203
+
+            from ac_status
+            where region_code like "330522%"
+              and region_code not like "33052211%"
+            union
+            select
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0))                                                          as commit_number_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))                                                           as active_number_b204,
+                sum(IF(ac_status.type = "B204-1", 1, 0))                                                                                as total_number_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0)) * 100/ sum(IF(ac_status.type = "B204-1", 1, 0))          as commit_rate_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))/ sum(IF(ac_status.type = "B204-1", 1, 0)) as active_rate_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0))                                                          as commit_number_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))                                                           as active_number_b203,
+                sum(IF(ac_status.type = "B203", 1, 0))                                                                                as total_number_b203,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0)) * 100/ sum(IF(ac_status.type = "B203", 1, 0))          as commit_rate_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))/ sum(IF(ac_status.type = "B203", 1, 0)) as active_rate_b203
+
+            from ac_status
+            where region_code like "330523%"
+              and region_code not like "33052311%"
+            union
+            select
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0))                                                          as commit_number_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))                                                           as active_number_b204,
+                sum(IF(ac_status.type = "B204-1", 1, 0))                                                                                as total_number_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0)) * 100/ sum(IF(ac_status.type = "B204-1", 1, 0))          as commit_rate_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))/ sum(IF(ac_status.type = "B204-1", 1, 0)) as active_rate_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0))                                                          as commit_number_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))                                                           as active_number_b203,
+                sum(IF(ac_status.type = "B203", 1, 0))                                                                                as total_number_b203,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0)) * 100/ sum(IF(ac_status.type = "B203", 1, 0))          as commit_rate_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))/ sum(IF(ac_status.type = "B203", 1, 0)) as active_rate_b203
+
+            from ac_status
+            where region_code like "330560%"
+            union
+            select
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0))                                                          as commit_number_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))                                                           as active_number_b204,
+                sum(IF(ac_status.type = "B204-1", 1, 0))                                                                                as total_number_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B204-1", 1, 0)) * 100/ sum(IF(ac_status.type = "B204-1", 1, 0))          as commit_rate_b204,
+                sum(IF(is_active = "活跃" and ac_status.type = "B204-1", 1, 0))/ sum(IF(ac_status.type = "B204-1", 1, 0)) as active_rate_b204,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0))                                                          as commit_number_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))                                                           as active_number_b203,
+                sum(IF(ac_status.type = "B203", 1, 0))                                                                                as total_number_b203,
+                sum(IF(is_commit = "已上报" and ac_status.type = "B203", 1, 0)) * 100/ sum(IF(ac_status.type = "B203", 1, 0))          as commit_rate_b203,
+                sum(IF(is_active = "活跃" and ac_status.type = "B203", 1, 0))/ sum(IF(ac_status.type = "B203", 1, 0)) as active_rate_b203
+
+            from ac_status
+            where region_code like "33052211%"
+               or region_code like "33052311%"
+
+
+
+
+
+        </select>
+    <resultMap id="getResultInd" type="com.hy.ureport.entity.ResultIndustrial">
+        <result property="commitNumberB204" column="commit_number_b204"/>
+        <result property="activeNumberB204" column="active_number_b204"/>
+        <result property="totalNumberB204" column="total_number_b204"/>
+        <result property="commitRateB204" column="commit_rate_b204"/>
+        <result property="activeRateB204" column="active_rate_b204"/>
+        <result property="commitNumberB203" column="commit_number_b203"/>
+        <result property="activeNumberB203" column="active_number_b203"/>
+        <result property="totalNumberB203" column="total_number_b203"/>
+        <result property="commitRateB203" column="commit_rate_b203"/>
+        <result property="activeRateB203" column="active_rate_b203"/>
+    </resultMap>
+</mapper>

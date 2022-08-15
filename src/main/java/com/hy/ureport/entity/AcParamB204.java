@@ -1,0 +1,102 @@
+package com.hy.ureport.entity;
+
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+/**
+ * <p>
+ * 总企业数与带报数传值
+ * </p>
+ *
+ * @author jeremy
+ * @since 2022-08-15
+ */
+@Data
+@EqualsAndHashCode(callSuper = false)
+public class AcParamB204 implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * 湖州总数
+     */
+    private Integer totalHz;
+
+    /**
+     * 湖州代报
+     */
+    private Integer reHz;
+
+    /**
+     * 吴兴总数
+     */
+    private Integer totalWx;
+
+    /**
+     * 吴兴代报
+     */
+    private Integer  reWx;
+
+    /**
+     * 南浔总数
+     */
+    private Integer totalNx;
+
+    /**
+     * 南浔代报
+     */
+    private Integer  reNx;
+
+    /**
+     * 德清总数
+     */
+    private Integer totalDq;
+
+    /**
+     * 德清代报
+     */
+    private Integer  reDq;
+
+    /**
+     * 长兴总数
+     */
+    private Integer totalCx;
+
+    /**
+     * 长兴代报
+     */
+    private Integer  reCx;
+
+    /**
+     * 安吉总数
+     */
+    private Integer totalAj;
+
+    /**
+     * 安吉代报
+     */
+    private Integer reAj;
+
+    /**
+     * 南太湖总数
+     */
+    private Integer totalNth;
+
+    /**
+     * 南太湖代报
+     */
+    private Integer  reNth;
+
+    /**
+     * 长合总数
+     */
+    private Integer totalCh;
+
+    /**
+     * 长合代报
+     */
+    private Integer  reCh;
+
+
+}

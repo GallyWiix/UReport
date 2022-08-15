@@ -26,7 +26,7 @@ public class CodeGenerator {
         gc.setOpen(false); //生成后是否打开资源管理器
         gc.setServiceName("%sService");	//去掉Service接口的首字母I
         gc.setIdType(IdType.AUTO); //主键策略
-        gc.setSwagger2(true);//开启Swagger2模式
+        gc.setSwagger2(false);//开启Swagger2模式
         mpg.setGlobalConfig(gc);
 
         // 3、数据源配置

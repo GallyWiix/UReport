@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hy.ureport.mapper.AcStatusMapper">
+
+    <insert id="insertBatch">
+        insert into ac_status (
+        tyshxydm,
+        zzjgdm,
+        company_name,
+        region_code,
+        type,
+        is_active,
+        is_commit,
+        commit_date
+        )values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item.tyshxydm},
+            #{item.zzjgdm},
+            #{item.companyName},
+            #{item.regionCode},
+            #{item.type},
+            #{item.isActive},
+            #{item.isCommit},
+            #{item.commitDate}
+
+            )
+        </foreach>
+    </insert>
+
+    <update id="truncate">
+        truncate table ac_status
+    </update>
+
+</mapper>
