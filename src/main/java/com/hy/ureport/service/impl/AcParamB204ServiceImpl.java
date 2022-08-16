@@ -23,9 +23,19 @@ public class AcParamB204ServiceImpl extends ServiceImpl<AcParamB204Mapper, AcPar
         AcParamB204 acParam = new AcParamB204();
         acParam.setTotalHz(acParamB204.getTotalHz());
         acParam.setReHz(acParamB204.getReHz());
-//        acParam.setTotalWx(acParamB204.getTotalWx());
-//        acParam.setSubWx(acParamB204.getSubWx());
-        //TODO
+        acParam.setTotalWx(acParamB204.getTotalWx());
+        acParam.setReWx(acParamB204.getReWx());
+        acParam.setTotalNx(acParamB204.getTotalNx());
+        acParam.setReNx(acParamB204.getReWx());
+        acParam.setTotalDq(acParamB204.getTotalDq());
+        acParam.setReDq(acParamB204.getReDq());
+        acParam.setTotalCx(acParamB204.getTotalCx());
+        acParam.setReCx(acParamB204.getReCx());
+        acParam.setTotalAj(acParamB204.getTotalAj());
+        acParam.setReAj(acParamB204.getReAj());
+        acParam.setTotalCh(acParamB204.getTotalCh());
+        acParam.setReCh(acParamB204.getReCh());
+        
         baseMapper.insert(acParam);
     }
 }
