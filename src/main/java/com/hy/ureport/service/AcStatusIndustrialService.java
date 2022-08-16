@@ -3,6 +3,8 @@ package com.hy.ureport.service;
 import com.hy.ureport.entity.AcStatusIndustrial;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务类
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface AcStatusIndustrialService extends IService<AcStatusIndustrial> {
 
+    List<AcStatusIndustrial> listAll();
 }

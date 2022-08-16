@@ -3,7 +3,7 @@
 <mapper namespace="com.hy.ureport.mapper.AcStatusMapper">
 
     <insert id="insertBatch">
-        insert into ac_status (
+        insert into ac_status_industrial (
         tyshxydm,
         zzjgdm,
         company_name,
@@ -29,7 +29,7 @@
     </insert>
 
     <update id="truncate">
-        truncate table ac_status
+        truncate table ac_status_industrial
     </update>
 
 </mapper>

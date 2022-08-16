@@ -26,7 +26,7 @@ public class AcParamB203 implements Serializable {
     /**
      * 湖州代报
      */
-    private Integer  subHz;
+    private Integer  reHz;
 
     /**
      * 吴兴总数
@@ -36,7 +36,7 @@ public class AcParamB203 implements Serializable {
     /**
      * 吴兴代报
      */
-    private Integer  subWx;
+    private Integer  reWx;
 
     /**
      * 南浔总数
@@ -46,7 +46,7 @@ public class AcParamB203 implements Serializable {
     /**
      * 南浔代报
      */
-    private Integer  subNx;
+    private Integer  reNx;
 
     /**
      * 德清总数
@@ -56,7 +56,7 @@ public class AcParamB203 implements Serializable {
     /**
      * 德清代报
      */
-    private Integer  subDq;
+    private Integer  reDq;
 
     /**
      * 长兴总数
@@ -66,7 +66,7 @@ public class AcParamB203 implements Serializable {
     /**
      * 长兴代报
      */
-    private Integer  subCx;
+    private Integer  reCx;
 
     /**
      * 安吉总数
@@ -76,7 +76,7 @@ public class AcParamB203 implements Serializable {
     /**
      * 安吉代报
      */
-    private Integer  subAj;
+    private Integer  reAj;
 
     /**
      * 南太湖总数
@@ -86,7 +86,7 @@ public class AcParamB203 implements Serializable {
     /**
      * 南太湖代报
      */
-    private Integer  subNth;
+    private Integer  reNth;
 
     /**
      * 长合总数
@@ -96,7 +96,7 @@ public class AcParamB203 implements Serializable {
     /**
      * 长合代报
      */
-    private Integer  subCh;
+    private Integer  reCh;
 
 
 }

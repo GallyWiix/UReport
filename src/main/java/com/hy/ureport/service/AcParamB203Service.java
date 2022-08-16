@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface AcParamB203Service extends IService<AcParamB203> {
 
+    void saveParam(AcParamB203 acParamB203);
 }

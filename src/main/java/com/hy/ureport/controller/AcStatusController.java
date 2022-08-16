@@ -4,7 +4,9 @@ package com.hy.ureport.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hy.ureport.entity.AcStatus;
+import com.hy.ureport.entity.AcStatusIndustrial;
 import com.hy.ureport.entity.query.TableQuery;
+import com.hy.ureport.service.AcStatusIndustrialService;
 import com.hy.ureport.service.AcStatusService;
 import com.hy.ureport.util.BusinessException;
 import com.hy.ureport.util.R;
@@ -25,12 +27,16 @@ import java.util.List;
  * @author jeremy
  * @since 2022-08-12
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/acStatus")
 public class AcStatusController {
 
     @Resource
     AcStatusService acStatusService;
+
+    @Resource
+    AcStatusIndustrialService acStatusIndustrialService;
 
     //数据导入
     @PostMapping("/import")
@@ -52,11 +58,17 @@ public class AcStatusController {
         return R.ok().message("清空数据库成功！");
     }
     //数据回显
+//    @GetMapping("/listAll")
+//    public R listAll(){
+//        List<AcStatus> acStatusList = acStatusService.listAll();
+//        return R.ok().data("list",acStatusList);
+//    }
     @GetMapping("/listAll")
     public R listAll(){
-        List<AcStatus> acStatusList = acStatusService.listAll();
-        return R.ok().data("list",acStatusList);
+        List<AcStatusIndustrial> acStatusIndustrialsList = acStatusIndustrialService.listAll();
+        return R.ok().data("list",acStatusIndustrialsList);
     }
+
 
     //分页显示回显数据
     @GetMapping("/list/{page}/{limit}")
