@@ -6,6 +6,7 @@ import com.hy.ureport.entity.ResultIndustrial;
 import com.hy.ureport.service.ResultIndService;
 import com.hy.ureport.service.ResultIndustrialService;
 import com.hy.ureport.util.R;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -23,6 +24,7 @@ import java.util.List;
  * @since 2022-08-15
  */
 @RestController
+@CrossOrigin
 @RequestMapping("/resultInd")
 public class ResultIndController {
 

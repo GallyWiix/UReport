@@ -5,11 +5,7 @@ import com.hy.ureport.entity.AcParamB203;
 import com.hy.ureport.entity.AcParamB204;
 import com.hy.ureport.service.AcParamB203Service;
 import com.hy.ureport.util.R;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -22,6 +18,7 @@ import javax.annotation.Resource;
  * @since 2022-08-15
  */
 @RestController
+@CrossOrigin
 @RequestMapping("/acParamB203")
 public class AcParamB203Controller {
     @Resource

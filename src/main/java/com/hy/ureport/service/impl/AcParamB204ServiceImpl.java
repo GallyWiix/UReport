@@ -1,11 +1,17 @@
 package com.hy.ureport.service.impl;
 
+import com.alibaba.excel.EasyExcel;
 import com.hy.ureport.entity.AcParamB204;
+import com.hy.ureport.entity.AcStatus;
+import com.hy.ureport.listener.ExcelListener;
 import com.hy.ureport.mapper.AcParamB204Mapper;
 import com.hy.ureport.service.AcParamB204Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.Resource;
+import java.io.InputStream;
 
 /**
  * <p>
@@ -17,6 +23,9 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 public class AcParamB204ServiceImpl extends ServiceImpl<AcParamB204Mapper, AcParamB204> implements AcParamB204Service {
+    @Resource
+    AcParamB204Mapper acParamB204Mapper;
+
     @Transactional
     @Override
     public void saveParam(AcParamB204 acParamB204) {
@@ -38,4 +47,5 @@ public class AcParamB204ServiceImpl extends ServiceImpl<AcParamB204Mapper, AcPar
         
         baseMapper.insert(acParam);
     }
+
 }
